@@ -1,0 +1,117 @@
+//@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+html{ font-size: 62.5%; }
+
+$baseColor: #fdfcf6;
+$subColor: #bea300;
+$keyColor: #D3EDFB;
+$fontColor: #4c4c4c;
+
+body{ 
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+header {
+  background-image: url(../images/img_back1.jpg);
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 250px;
+  }
+}
+
+// Common Styles
+section {
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  
+  h2 {
+    @extend .abel;
+    font-size: 3.2rem;
+    @extend .uppercase;
+    margin: 60px 0;
+    
+  }
+}
+
+.three-box{
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  display: flex;
+}
+
+.box h3 {
+  margin: 0 0 40px;
+  padding: 10px;
+  text-align:center;
+  background-color: $subColor;
+  color: $baseColor;
+}
+
+.box {
+  margin: 0 20px;
+  width: 100%;
+  background: $keyColor;
+}
+
+@media (max-width: 768px) {
+  .three-box {
+    flex-direction: column;
+  }
+  .box {
+    margin: 10px 0;
+  }
+}
+
+.button {
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color:$fontColor;
+    background-color: $keyColor;
+    border-radius: 5px;
+}
